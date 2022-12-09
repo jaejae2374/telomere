@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두피 진단 케어</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="outer">
+        <h1>두피 진단하기 (탈모)</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="button">
+                <label for="chooseFile">
+                    👉 두피 사진을 업로드 해주세요 ! 👈
+                </label>
+            </div>
+            <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+            <div class="sbtn">
+                <input class="btn" type="submit" value="제출" action="diagnose/" method="POST">
+            </div>
+        </form>
+    </div>
+</body>
