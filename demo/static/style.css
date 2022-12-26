@@ -1,0 +1,36 @@
+.button {
+    display: flex;
+    justify-content: center;
+}
+label {
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* 못생긴 기존 input 숨기기 */
+#chooseFile {
+    visibility: hidden;
+}
+
+.outer {
+    text-align: center;
+}
+.result {
+    text-align: center;
+}
+.status {
+    margin-top: auto;
+}
+img {
+    width: 500px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
